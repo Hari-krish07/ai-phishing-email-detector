@@ -2,7 +2,6 @@
 A Machine Learning–based phishing email detection system that classifies emails as Safe or Phishing using Natural Language Processing (NLP) and Logistic Regression.
 The project includes a live web interface built with Streamlit and is fully deployed online.
 
-(https://ai-phishing-email-detector-egnzxheou47l4znecn95n4.streamlit.app)## 🚀 Live Demo
 👉 [Click here to try the app](https://ai-phishing-email-detector-egnzxheou47l4znecn95n4.streamlit.app/)
 (Paste any email content to instantly check if it is phishing or safe.)
 
@@ -81,43 +80,50 @@ Designed to resemble a SOC internal security tool, not a toy demo.
 
 ai-phishing-email-detector/
 │
-├── app.py # Streamlit web app
+├── app.py # Streamlit web app 
 ├── requirements.txt # Project dependencies
 ├── README.md # Project documentation
 │
 ├── data/
-│ └── cleaned_phishing.csv
+│ └── cleaned_phishing.csv # 18K cleaned email dataset
 │
 ├── models/
-│ ├── phishing_model.joblib
-│ └── vectorizer.joblib
+│ ├── phishing_model.joblib # 96.24% Logistic Regression model
+│ └── vectorizer.joblib # TF-IDF vectorizer
 │
 ├── src/
-│ ├── preprocess_data.py
-│ ├── feature_extraction.py
-│ ├── train_model.py
-│ └── predict_email.py
+│ ├── preprocess_data.py # Data cleaning pipeline
+│ ├── feature_extraction.py # TF-IDF feature extraction
+│ ├── train_model.py # Model training script
+│ └── predict_email.py # CLI prediction script
 │
-└── .gitignore
-
+└── .gitignore # Python/git ignores
 ⚠️ Limitations & Future Improvements
 
 -Some highly sophisticated phishing emails may bypass detection
+
 -Model relies mainly on textual patterns
 
-Planned improvements:
+
+**Planned improvements:
 
 -Add more real-world phishing samples
+
 -Include rule-based checks (URLs, urgency keywords, formatting)
+
 -Use advanced NLP models (e.g., transformers)
+
 -Integrate email header analysis
 
 In real SOC environments, ML models are combined with rules and continuous retraining.
 
 📌 Use Cases
 -SOC analyst phishing triage
+
 -Security awareness training
+
 -Educational ML/NLP project
+
 -Portfolio demonstration for cybersecurity roles
 
 👤 Author
@@ -129,8 +135,11 @@ Aspiring SOC Analyst | Cybersecurity
 This project demonstrates:
 
 -End-to-end ML pipeline
+
 -Security-focused thinking
+
 -Real-world applicability
+
 -Deployment & production mindset
 
 If you find this useful, feel free to ⭐ the repository.
