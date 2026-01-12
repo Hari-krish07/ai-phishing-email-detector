@@ -78,26 +78,31 @@ Designed to resemble a SOC internal security tool, not a toy demo.
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
+```
 ai-phishing-email-detector/
 │
-├── app.py # Streamlit web app 
-├── requirements.txt # Project dependencies
-├── README.md # Project documentation
+├── app.py                  # Streamlit web app
+├── requirements.txt        # Project dependencies
+├── README.md               # Project documentation
 │
 ├── data/
-│ └── cleaned_phishing.csv # 18K cleaned email dataset
+│   └── cleaned_phishing.csv   # 18K cleaned email dataset
 │
 ├── models/
-│ ├── phishing_model.joblib # 96.24% Logistic Regression model
-│ └── vectorizer.joblib # TF-IDF vectorizer
+│   ├── phishing_model.joblib  # Logistic Regression model (96.24%)
+│   └── vectorizer.joblib      # TF-IDF vectorizer
 │
 ├── src/
-│ ├── preprocess_data.py # Data cleaning pipeline
-│ ├── feature_extraction.py # TF-IDF feature extraction
-│ ├── train_model.py # Model training script
-│ └── predict_email.py # CLI prediction script
+│   ├── preprocess_data.py     # Data cleaning pipeline
+│   ├── feature_extraction.py  # TF-IDF feature extraction
+│   ├── train_model.py         # Model training script
+│   └── predict_email.py       # CLI prediction script
 │
-└── .gitignore # Python/git ignores
+└── .gitignore               # Git ignore rules
+```
+
 ⚠️ Limitations & Future Improvements
 
 -Some highly sophisticated phishing emails may bypass detection
